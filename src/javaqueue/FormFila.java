@@ -268,15 +268,15 @@ public class FormFila extends javax.swing.JFrame {
         
         if (!filaPrioridade.isEmpty() || !filaNormal.isEmpty()){
             
-            if((cont <= 3 || filaNormal.isEmpty()) && !filaPrioridade.isEmpty()){
+            if((cont < 3 || filaNormal.isEmpty()) && !filaPrioridade.isEmpty()){
                 Pessoa p = new Pessoa();
                 p = filaPrioridade.remove(); //dequeue
                 lblProx.setText("Prox: " +p.getNome());                     
                 cont ++;
                 mostra();
             }
-
-            if((cont > 3 || filaPrioridade.isEmpty()) && !filaNormal.isEmpty()){
+            else
+            if((cont == 3 || filaPrioridade.isEmpty()) && !filaNormal.isEmpty()){
                 Pessoa p = new Pessoa();
                 p = filaNormal.remove(); //dequeue
                 lblProx.setText("Prox: " +p.getNome());                     
