@@ -210,17 +210,22 @@ public class FormFila extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     int cont = 0;
+    
+    
     void mostra(){
+
         listFilaNormal.setText("");
-        if(!filaNormal.isEmpty())
-            for(Pessoa p:filaNormal)
-                listFilaNormal.append(p+"\n");
-        
         listFilaPreferencial.setText("");
-        if(!filaPrioridade.isEmpty())
-            for(Pessoa p:filaPrioridade)
-                listFilaPreferencial.append(p+"\n"); 
              
+            for(Pessoa p:filaNormal){
+                String dataFormated = "Nome: " + p.getNome() + "\nRG: " + p.getRg() +"\nIdade: " + p.getIdade() + "\n-----------------\n";
+                listFilaNormal.append(dataFormated);
+            }
+        
+            for(Pessoa p:filaPrioridade){
+                String dataFormated = "Nome: " + p.getNome() + "\nRG: " + p.getRg() +"\nIdade: " + p.getIdade() + "\n-----------------\n";
+                listFilaPreferencial.append(dataFormated);
+            }
             
     }
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -234,21 +239,23 @@ public class FormFila extends javax.swing.JFrame {
         }
         else
             filaPrioridade.add(p);      
-            mostra();
+                mostra();
    
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnAtenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtenderActionPerformed
         
         if (!filaPrioridade.isEmpty() || !filaNormal.isEmpty()){
-            if((cont < 3 || filaNormal.isEmpty()) && !filaPrioridade.isEmpty()){
+            
+            if((cont <= 3 || filaNormal.isEmpty()) && !filaPrioridade.isEmpty()){
                 Pessoa p = new Pessoa();
                 p = filaPrioridade.remove(); //dequeue
                 lblProx.setText("Prox:" +p.getNome());                     
                 cont ++;
                 mostra();
             }
-            else if((cont >= 3 || filaPrioridade.isEmpty()) && !filaNormal.isEmpty()){
+
+            if((cont > 3 || filaPrioridade.isEmpty()) && !filaNormal.isEmpty()){
                 Pessoa p = new Pessoa();
                 p = filaNormal.remove(); //dequeue
                 lblProx.setText("Prox:" +p.getNome());                     
