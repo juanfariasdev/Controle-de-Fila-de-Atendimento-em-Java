@@ -271,7 +271,7 @@ public class FormFila extends javax.swing.JFrame {
             if((cont <= 3 || filaNormal.isEmpty()) && !filaPrioridade.isEmpty()){
                 Pessoa p = new Pessoa();
                 p = filaPrioridade.remove(); //dequeue
-                lblProx.setText("Prox:" +p.getNome());                     
+                lblProx.setText("Prox: " +p.getNome());                     
                 cont ++;
                 mostra();
             }
@@ -279,7 +279,7 @@ public class FormFila extends javax.swing.JFrame {
             if((cont > 3 || filaPrioridade.isEmpty()) && !filaNormal.isEmpty()){
                 Pessoa p = new Pessoa();
                 p = filaNormal.remove(); //dequeue
-                lblProx.setText("Prox:" +p.getNome());                     
+                lblProx.setText("Prox: " +p.getNome());                     
                 cont = 0;
                 mostra();
             }
