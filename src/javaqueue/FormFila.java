@@ -44,7 +44,6 @@ public class FormFila extends javax.swing.JFrame {
 
         lblProx.setFont(new java.awt.Font("Segoe UI Black", 0, 48)); // NOI18N
         lblProx.setForeground(new java.awt.Color(255, 255, 255));
-        lblProx.setText("Prox:");
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel2.setText("Juan Pablo Farias");
@@ -234,7 +233,7 @@ public class FormFila extends javax.swing.JFrame {
         if(txtNome.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Preencha o nome");
             return;
-        } p.setNome(txtRG.getText());
+        } p.setNome(txtNome.getText());
         
         if(txtRG.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Preencha o RG");
