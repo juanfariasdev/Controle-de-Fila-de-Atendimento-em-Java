@@ -230,9 +230,31 @@ public class FormFila extends javax.swing.JFrame {
     }
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         Pessoa p = new Pessoa();
-        p.setNome(txtNome.getText());
-        p.setRg(txtRG.getText());
-        p.setIdade(Integer.parseInt(txtIdade.getText()));
+        
+        if(txtNome.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Preencha o nome");
+            return;
+        } p.setNome(txtRG.getText());
+        
+        if(txtRG.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Preencha o RG");
+            return;
+        } p.setRg(txtRG.getText());
+        
+        
+        if(txtIdade.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Preencha a IDADE");
+            return;
+        }
+        try {
+            int d = Integer.parseInt(txtIdade.getText());
+        } 
+        catch (NumberFormatException nfe) {
+            JOptionPane.showMessageDialog(null, "Preencha com NÚMERO a IDADE");
+            return;
+        } p.setIdade(Integer.parseInt(txtIdade.getText()));
+        
+        
         if (p.getIdade() < 60){
             filaNormal.add(p);
             mostra();       
