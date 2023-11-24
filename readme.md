@@ -1,8 +1,13 @@
-# JavaQueue
-![Screenshots](assets/screenshot.png)
- 
-Atende paciente 
+# Java Queue
 
-Verificar pacientes na fila (Mostra o nome de todos da fila)  
+Projeto feito para aprender sobre filas em Java
 
-Pacientes com mais de 60 anos tem prioridade. Ele atender 3 pacientes com mais de 60 anos para cada um menor de 60.   
+![Screenshots](assets/screenshot.,png)
+
+
+ ## Funções:
+- Atende paciente 
+
+- Verificar pacientes na fila (Mostra o nome de todos da fila)  
+
+- Pacientes com mais de 60 anos tem prioridade. Ele atender 3 pacientes com mais de 60 anos para cada um menor de 60.   
