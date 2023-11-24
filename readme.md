@@ -2,7 +2,7 @@
 
 Projeto feito para aprender sobre filas em Java
 
-![Screenshots](assets/screenshot.,png)
+![Screenshots](assets/screenshot.png)
 
 
  ## Funções:
