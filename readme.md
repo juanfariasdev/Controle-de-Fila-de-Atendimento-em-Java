@@ -1,13 +1,13 @@
-# Java Queue
+# Controle de Fila de Atendimento
 
-Projeto feito para aprender sobre filas em Java
+Projeto em Java para aprendizado sobre filas.
 
 ![Screenshots](assets/screenshot.png)
 
+## Funcionalidades:
 
- ## Funções:
-- Atende paciente 
+- **Atendimento de Pacientes:** Organiza a fila de atendimento.
+- **Verificação da Fila:** Mostra o nome de cada paciente na fila.
+- **Prioridade para Pacientes com mais de 60 anos:** A cada três pacientes idosos atendidos, um paciente mais jovem é chamado.
 
-- Verificar pacientes na fila (Mostra o nome de todos da fila)  
-
-- Pacientes com mais de 60 anos tem prioridade. Ele atender 3 pacientes com mais de 60 anos para cada um menor de 60.   
+O projeto destaca o aprendizado prático de filas em Java, com foco em uma gestão eficiente e na priorização de pacientes idosos.
